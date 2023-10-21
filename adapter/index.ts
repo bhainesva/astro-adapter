@@ -187,9 +187,9 @@ export default function createIntegration(args?: Options): AstroIntegration {
 						'@astrojs/markdown-remark',
 					],
 					plugins: [denoImportsShimPlugin, denoRenameNodeModulesPlugin],
-					banner: {
-						js: SHIM,
-					},
+					// banner: {
+					// 	js: SHIM,
+					// },
 					logOverride: {
 						'ignored-bare-import': 'silent'
 					},

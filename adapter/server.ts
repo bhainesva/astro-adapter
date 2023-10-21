@@ -81,13 +81,13 @@ export function start(manifest: SSRManifest, options: Options) {
 	};
 
 	const port = options.port ?? 8085;
-	_server = new Server({
-		port,
-		hostname: options.hostname ?? '0.0.0.0',
-		handler,
-	});
+	// _server = new Server({
+	// 	port,
+	// 	hostname: options.hostname ?? '0.0.0.0',
+	// 	handler,
+	// });
 
-	_startPromise = Promise.resolve(_server.listenAndServe());
+	// _startPromise = Promise.resolve(_server.listenAndServe());
 	console.error(`Server running on port ${port}`);
 }
 
