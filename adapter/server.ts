@@ -118,7 +118,7 @@ export function createExports(manifest: SSRManifest, options: Options) {
 						.then(r => r.text());
 					return {
 						content: content,
-						path: streamOutput.slug
+						path: streamOutput.slug || 'index.html'
 					}
 				}
 			}
