@@ -13,7 +13,7 @@
         "sourceFiles": [
           {
             "root": "dist/server",
-            "pattern": "*{.ts,.mjs,.json}"
+            "pattern": "**/*{.ts,.mjs,.json}"
           }
         ],
         "event": "ON_PAGE_GENERATE",
