@@ -1,0 +1,42 @@
+{
+  "features": [
+    {
+      "name": "product",
+      "streamId": "products",
+      "templateType": "JS",
+      "entityPageSet": {
+        "plugin": {}
+      }
+    },
+    {
+      "name": "static",
+      "templateType": "JS",
+      "staticPage": {
+        "plugin": {}
+      }
+    }
+  ],
+  "streams": [
+    {
+      "$id": "products",
+      "fields": [
+				"id",
+				"name",
+				"primaryPhoto",
+				"richTextDescriptionV2",
+				"slug"
+			],
+      "filter": {
+        "entityTypes": [
+          "product"
+        ]
+      },
+      "localization": {
+        "locales": [
+          "en"
+        ],
+        "primary": false
+      }
+    }
+  ]
+}
