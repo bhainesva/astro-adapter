@@ -9,7 +9,7 @@
       }
     },
     {
-      "name": "static",
+      "name": "index",
       "templateType": "JS",
       "staticPage": {
         "plugin": {}

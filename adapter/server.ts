@@ -112,7 +112,8 @@ export function createExports(manifest: SSRManifest, options: Options) {
 		// },
 		async handle({streamOutput, feature}) {
 			for (const route of manifest.routes) {
-				if (route.routeData.route?.includes(feature)) {
+				// console.log(route);
+				if (route.routeData.component?.includes(feature)) {
 					const content = await app.render(new Request('https://localhost:8085/'), route.routeData, {document: streamOutput})
 						.then(r => r.text());
 					return {
