@@ -8,9 +8,13 @@ export function createExports(manifest: SSRManifest, options: Options) {
 
 	return {
 		async handle({streamOutput, feature}) {
+
 			for (const route of manifest.routes) {
-				const trimmedRoute = route.routeData.route.replace(/^\//, '') || 'index'
-				if (trimmedRoute === feature) {
+				console.log(route.routeData)
+			}
+			for (const route of manifest.routes) {
+				const trimmedRoute = route.routeData.route.replace(/^\//, '')
+				if (trimmedRoute || 'index' === feature) {
 					const content = await app.render(new Request('https://localhost:8085/'), route.routeData, {yextDocument: streamOutput})
 						.then(r => r.text());
 
@@ -19,7 +23,7 @@ export function createExports(manifest: SSRManifest, options: Options) {
 
 					return {
 						content,
-						path: path || 'finalFallback.html',
+						path: path,
 					}
 				}
 			}
