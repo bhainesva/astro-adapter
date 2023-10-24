@@ -1,9 +1,17 @@
 ---
 import { getCollection } from "astro:content";
-import { getYextDocument } from "../../adapter/index";
+// import { getYextDocument } from "../../adapter/index";
 import Layout from '../layouts/Layout.astro';
 
-const document = await getYextDocument(Astro, getCollection);
+const document = import.meta.env.DEV
+		? (await getCollection('localData', ({data}) => {
+			return data?.__?.name === Astro.url.pathname
+		}))[0].data
+		: Astro.locals.yextDocument
+
+// const getCollection = () => {}
+// const document = await getYextDocument(Astro, getCollection);
+// const document =  {name: "hi", primaryPhoto: {image: {url: "hi"}}, richTextDescriptionV2: {html: "hi"}}
 ---
 
 <Layout title="Welcome to a Product">
