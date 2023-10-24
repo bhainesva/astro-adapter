@@ -1,16 +1,16 @@
 {
   "features": [
     {
-      "name": "/",
+      "name": "index",
       "templateType": "JS",
       "staticPage": {
         "plugin": {}
       }
     },
     {
-      "name": "/product",
+      "name": "product",
       "templateType": "JS",
-      "streamId": "/product",
+      "streamId": "product",
       "entityPageSet": {
         "plugin": {}
       }
@@ -18,7 +18,7 @@
   ],
   "streams": [
     {
-      "$id": "/product",
+      "$id": "product",
       "fields": [
         "id",
         "name",

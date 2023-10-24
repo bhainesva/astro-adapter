@@ -7,27 +7,15 @@ export function createExports(manifest: SSRManifest, options: Options) {
 	const app = new App(manifest);
 
 	return {
-		async running() {
-			console.log("running")
-			return false;
-		},
-		async start() {
-			console.log("Starting")
-		},
-		async stop() {
-			console.log("Stopping")
-		},
 		async handle({streamOutput, feature}) {
 			for (const route of manifest.routes) {
-				console.log("Hello: ", route.routeData.route);
-			}
-			for (const route of manifest.routes) {
-				if (route.routeData.route === feature) {
+				const trimmedRoute = route.routeData.route.replace(/^\//, '') || 'index'
+				if (trimmedRoute === feature) {
 					const content = await app.render(new Request('https://localhost:8085/'), route.routeData, {yextDocument: streamOutput})
 						.then(r => r.text());
 
 					// Fallback to route
-					let path = streamOutput?.slug || (route.routeData.route.replace(/^\//, '') || 'index.html');
+					let path = streamOutput?.slug || (trimmedRoute || 'index.html');
 
 					return {
 						content,
@@ -36,10 +24,7 @@ export function createExports(manifest: SSRManifest, options: Options) {
 				}
 			}
 
-			return {
-				content: `Would have errored with unable to match feature: ${feature}`,
-				path: `${Math.floor(Math.random() * 1000)}-url`,
-			}
+			throw new Error(`Unable to match feature: ${feature}`)
 		},
 	};
 }
