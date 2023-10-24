@@ -3,13 +3,17 @@
     {
       "name": "/",
       "templateType": "JS",
-      "staticPage": {}
+      "staticPage": {
+        "plugin": {}
+      }
     },
     {
       "name": "/product",
       "templateType": "JS",
       "streamId": "/product",
-      "entityPageSet": {}
+      "entityPageSet": {
+        "plugin": {}
+      }
     }
   ],
   "streams": [
@@ -27,7 +31,7 @@
           "product"
         ]
       },
-      "source": "content",
+      "source": "knowledgeGraph",
       "destination": "pages",
       "localization": {
         "locales": ["en"],

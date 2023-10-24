@@ -7,7 +7,20 @@ export function createExports(manifest: SSRManifest, options: Options) {
 	const app = new App(manifest);
 
 	return {
+		async running() {
+			console.log("running")
+			return false;
+		},
+		async start() {
+			console.log("Starting")
+		},
+		async stop() {
+			console.log("Stopping")
+		},
 		async handle({streamOutput, feature}) {
+			for (const route of manifest.routes) {
+				console.log("Hello: ", route.routeData.route);
+			}
 			for (const route of manifest.routes) {
 				if (route.routeData.route === feature) {
 					const content = await app.render(new Request('https://localhost:8085/'), route.routeData, {yextDocument: streamOutput})
@@ -18,7 +31,7 @@ export function createExports(manifest: SSRManifest, options: Options) {
 
 					return {
 						content,
-						path,
+						path: path || 'finalFallback.html',
 					}
 				}
 			}
