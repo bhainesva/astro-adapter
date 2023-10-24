@@ -23,7 +23,10 @@ export function createExports(manifest: SSRManifest, options: Options) {
 				}
 			}
 
-			throw new Error(`Unable to find page matching feature: ${feature}`)
+			return {
+				content: `Would have errored with unable to match feature: ${feature}`,
+				path: `${Math.floor(Math.random() * 1000)}-url`,
+			}
 		},
 	};
 }
