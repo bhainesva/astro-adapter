@@ -1,6 +1,6 @@
 import { handle } from "./dist/server/mod.ts"
 const input = {
-  "feature": "product",
+  "feature": "/product",
   "site": {
       "branchId": "12302",
       "businessId": "3249768",
@@ -140,4 +140,4 @@ const req = new Request("http://localhost:8085/")
 
 const res = await handle(input)
 
-console.log(res.content);
+console.log(res);

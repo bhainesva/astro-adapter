@@ -1,11 +1,20 @@
 ---
+import { getCollection } from "astro:content";
+import { getYextDocument } from "../../adapter/index";
 import Layout from '../layouts/Layout.astro';
-const document = Astro.locals.document;
+
+const document = await getYextDocument(Astro, getCollection);
 ---
 
 <Layout title="Welcome to a Product">
 	<main>
 		<h1>{document.name}</h1>
+
+		<div class="w-full flex justify-center mb-4">
+			<img width="400px" src={document.primaryPhoto.image.url} alt="">
+		</div>
+
+		<div class="description" set:html={document.richTextDescriptionV2.html} />
 	</main>
 </Layout>
 
@@ -15,7 +24,6 @@ const document = Astro.locals.document;
 		padding: 1rem;
 		width: 800px;
 		max-width: calc(100% - 2rem);
-		color: white;
 		font-size: 20px;
 		line-height: 1.6;
 	}
@@ -25,5 +33,9 @@ const document = Astro.locals.document;
 		line-height: 1;
 		text-align: center;
 		margin-bottom: 1em;
+	}
+
+	.description * {
+		color: white !important;
 	}
 </style>

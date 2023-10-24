@@ -1,41 +1,36 @@
 {
   "features": [
     {
-      "name": "product",
-      "streamId": "products",
+      "name": "/",
       "templateType": "JS",
-      "entityPageSet": {
-        "plugin": {}
-      }
+      "staticPage": {}
     },
     {
-      "name": "index",
+      "name": "/product",
       "templateType": "JS",
-      "staticPage": {
-        "plugin": {}
-      }
+      "streamId": "/product",
+      "entityPageSet": {}
     }
   ],
   "streams": [
     {
-      "$id": "products",
       "fields": [
-				"id",
-				"name",
-				"primaryPhoto",
-				"richTextDescriptionV2",
-				"slug"
-			],
+        "id",
+        "name",
+        "primaryPhoto",
+        "slug",
+        "richTextDescriptionV2.html"
+      ],
       "filter": {
         "entityTypes": [
           "product"
         ]
       },
+      "$id": "/product",
+      "source": "content",
+      "destination": "pages",
       "localization": {
-        "locales": [
-          "en"
-        ],
-        "primary": false
+        "locales": ["en"]
       }
     }
   ]

@@ -1,7 +1,18 @@
 export interface Options {
-	port?: number;
-	hostname?: string;
-	start?: boolean;
+	features: Record<string, {
+		stream?: {
+			fields?: string[],
+			localization?: {
+				locales: string[],
+			},
+			filter: {
+				entityIds?: string[]
+				entityTypes?: string[]
+				savedFilterIds?: string[]
+			}
+		},
+		path: string;
+	}>
 }
 
 export interface BuildConfig {

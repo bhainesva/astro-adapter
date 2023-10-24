@@ -1,0 +1,1 @@
+{"features":[{"name":"/","templateType":"JS","staticPage":{}},{"name":"/product","templateType":"JS","streamId":"/product","entityPageSet":{}},{"name":"/[sku]/[name]","templateType":"JS","staticPage":{}}],"streams":[{"fields":["id","primaryPhoto","slug","richTextDescriptionV2"],"filter":{"entityTypes":["product"]},"$id":"/product","source":"content","destination":"pages"}]}

@@ -1,0 +1,35 @@
+{
+	"__": {
+		"entityPageSet": {},
+		"name": "/product",
+		"streamId": "/product",
+		"templateType": "JS"
+	},
+	"businessId": 3249768,
+	"id": "7035467277668059762",
+	"key": "0:/product:knowledgeGraph:48632895:en",
+	"locale": "en",
+	"meta": {
+		"entityType": {
+			"id": "product",
+			"uid": 30000
+		},
+		"locale": "en"
+	},
+	"name": "Fabulous Pants",
+	"primaryPhoto": {
+		"image": {
+			"height": 1656,
+			"url": "https://a.mktgcdn.com/p-sandbox/Z3Ics9lzyrRg-v59BS92kI35CnXbkkj5dmeWGxgTwRo/1242x1656.jpg",
+			"width": 1242
+		}
+	},
+	"richTextDescriptionV2": {
+		"html": "\u003cp dir=\"ltr\" style=\"font-size: 14.67px; font-weight: 400; line-height: 18.67px; color: rgb(0, 0, 0); margin: 0; padding: 3px 2px 3px 2px; position: relative;\"\u003e\u003cspan\u003eBusey  ipsum dolor sit amet. The magic Indian is a mysterious spiritual force,  and we\u0026#39;re going to Cathedral Rock, and that\u0026#39;s the vortex of the  heart.Have you urinated? Have you drained your bladder? Are you free?  Because if you haven\u0026#39;t it will only come out later. I\u0026#39;m giving you some  information that your bodily fluids may penetrate your clothing fibre\u0026#39;s  without warning. \u003c/span\u003e\u003cbr/\u003e\u003cbr/\u003e\u003cspan\u003e Have you urinated? Have you drained your  bladder? Are you free? Because if you haven\u0026#39;t it will only come out  later. I\u0026#39;m giving you some information that your bodily fluids may  penetrate your clothing fibre\u0026#39;s without warning.The best way to  communicate is compatible. Compatible communication is listening with  open ears and an open mind, and not being fearful or judgemental about  what you\u0026#39;re hearing. \u003c/span\u003e\u003cbr/\u003e\u003cbr/\u003e\u003cspan\u003e I wrestled a bear once. A 750lbs black  bear.When you get lost in your imaginatory vagueness, your foresight  will become a nimble vagrant.Go with the feeling of the nature. Take it  easy. Know why you\u0026#39;re here. And remember to balance your internal energy  with the environment. \u003c/span\u003e\u003c/p\u003e"
+	},
+	"siteDomain": "",
+	"siteId": 0,
+	"siteInternalHostName": "",
+	"slug": "2-fabulous-pants",
+	"uid": 48632895
+}
